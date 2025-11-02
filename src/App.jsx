@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <h1>Vite + React</h1>
+      <h1>영화 평점 웹서비스</h1>
     </div>
   );
 }
