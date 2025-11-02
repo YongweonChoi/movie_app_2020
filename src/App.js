@@ -14,7 +14,8 @@ class App extends React.Component {
         'https://yts.mx/api/v2/list_movies.json?sort_by=rating'
       );
       const json = await response.json();
-      this.setState({ movies: json.data.movies, isLoading: false });
+      const movies = json?.data?.movies || [];
+      this.setState({ movies: movies, isLoading: false });
     } catch (error) {
       // If API is not available, use mock data
       const mockMovies = [
